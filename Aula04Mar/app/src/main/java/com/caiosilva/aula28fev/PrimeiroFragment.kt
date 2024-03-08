@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.FragmentManager
 import com.caiosilva.aula28fev.databinding.FragmentPrimeiroBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -45,7 +44,7 @@ class PrimeiroFragment : Fragment() {
 
         binding.buttonPrimeiroFragment.text = param1
         binding.buttonPrimeiroFragment.setOnClickListener {
-            BottomSheet.newInstance(parentFragmentManager)
+            showDialog()
         }
 
         return binding.root
